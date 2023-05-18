@@ -14,7 +14,6 @@ const SignUp = () => {
         const password = form.password.value
         const name = form.name.value
         const photo = form.photo.value
-        // const userDAta = user
         console.log(name, email, password, photo)
         signUp(email, password)
 
