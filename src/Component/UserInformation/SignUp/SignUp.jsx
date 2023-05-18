@@ -1,11 +1,13 @@
+import { updateProfile } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
     const {signUp} = useContext(AuthContext)
-
+    const navigate  = useNavigate()
     const hanleSignUp = (event) => {
         event.preventDefault()
         console.log(event.target)
@@ -18,21 +20,32 @@ const SignUp = () => {
         signUp(email, password)
 
         .then(result=>{
-            const loggedUser = result.user;
-            // displayName(name, photo, loggedUser)
-            console.log(loggedUser)
+            const user = result.user;
+            
+            updateName(name, photo, user)
+            console.log(user)
             // setError("")
             event.target.reset();
             alert('success')
-            // navigate('/')
+            navigate('/')
             // console.log(loggedUser)
         })
         .catch(error => {
             // setError(error.message)
             console.log(error)
         })
+    }
 
-
+    const updateName = (name, photo, user) =>{
+        updateProfile(user, {
+            displayName: name, photoURL: photo
+        })
+        .then((result)=>{
+            console.log(result)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
     }
     return (
         <div>

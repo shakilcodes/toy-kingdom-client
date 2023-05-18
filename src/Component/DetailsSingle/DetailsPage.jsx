@@ -15,7 +15,7 @@ const DetailsPage = () => {
             </div>
             <p className='text-3xl font-semibold mt-10 mb-3'>{toy_name}</p>
             <p className='text-xl mt-1'><span className='font-bold'>Saller Name</span>: {seller_name}</p>
-            <p className='text-xl mt-1'><span className='font-bold'>Saller Name</span>: {seller_email}</p>
+            <p className='text-xl mt-1'><span className='font-bold'>Saller Email</span>: {seller_email}</p>
             <p className='text-xl mt-1'><span className='font-bold'>Price:</span> {price}</p>
             <p className='text-xl mt-1'><span className='font-bold'>Available Quantity</span>: {quantity}</p>
             <p className='text-xl mt-1'><span className='font-bold'>Ratings:</span> {rating}</p>
