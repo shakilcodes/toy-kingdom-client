@@ -1,10 +1,30 @@
 import React from 'react';
+import "./MyToys.css"
 
-const DisplayMyToy = ({toy}) => {
-    console.log(toy)
+const DisplayMyToy = ({ toy }) => {
+    const { _id, picture, seller_email, rating, toy_name, seller_name, sub_category, price, quantity, description } = toy;
+
     return (
-        <div>
-            
+        <div className='myToys'>
+            <div>
+                <img className='h-64 w-64' src="./../../../Toys/truck 1.jpeg" alt="" />
+            </div>
+
+            <div>
+                <h1 className='text-2xl font-bold'>{toy_name}</h1>
+                <h1 className='text-xl'>Seller: {seller_name}</h1>
+                <h1>Seller email: {seller_email}</h1>
+                <h1>Sub-Toys: {sub_category}</h1>
+                <h1>Ratings: {rating}</h1>
+            </div>
+            <div>
+                <h1><span className='text-2xl font-bold'>Description</span>: {description}</h1>
+            </div>
+            <div className='flex flex-col gap-2'>
+            <button className='btn'>Update</button>
+            <button className='btn'>Remove</button>
+            </div>
+
         </div>
     );
 };

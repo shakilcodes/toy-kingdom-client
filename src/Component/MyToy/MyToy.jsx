@@ -8,22 +8,22 @@ import DisplayMyToy from './DisplayMyToy';
 
 
 const MyToy = () => {
-    const me = useContext(AuthContext)
+    const {user, loading} = useContext(AuthContext)
+    if(loading){
+        return
+    }
     const [myToys, setMyToys] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5010/singleToys/toyworld@example.com')
+        fetch(`https://toy-kingdom-server.vercel.app/singleToys/${user?.email}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             setMyToys(data)
         })
     },[])
-    console.log(myToys)
-    console.log(me);
     return (
         <div>
             <h1 className='mt-32 text-4xl text-center'>My Toys</h1>
-            <div>
+            <div className='mx-28'>
                 {
                     myToys?.map(d => <DisplayMyToy key={d._id} toy={d}></DisplayMyToy>)
                 }

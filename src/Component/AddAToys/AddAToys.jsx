@@ -21,7 +21,7 @@ const AddAToys = () => {
         const seller_email = user?.email
         const inputValues = {picture, toyName, sub_category, price, rating, quantity, description, seller_name, seller_email }
         console.log(inputValues)
-        fetch('http://localhost:5010/postToys',{
+        fetch('https://toy-kingdom-server.vercel.app/postToys',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

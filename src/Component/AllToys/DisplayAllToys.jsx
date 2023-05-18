@@ -8,7 +8,7 @@ const DisplayAllToys = ({ toy }) => {
         <div>
             <div className="mx-auto card w-96 bg-base-100 shadow-xl">
                 <figure>
-                    <img className='w-72 h-72' src={picture} alt="Fire Truck" /></figure>
+                    <img className='w-72 h-72' src="./../../../Toys/truck 1.jpeg" alt="Fire Truck" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{toy_name}</h2>
                     <p>Seller: {seller_name}</p>

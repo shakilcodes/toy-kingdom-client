@@ -4,6 +4,7 @@ import "./DetailsPage.css"
 
 const DetailsPage = () => {
     const singeToy = useLoaderData()
+    console.log(singeToy)
     const {_id, toy_name, seller_name,description, sub_category, price,rating, quantity, seller_email } = singeToy;
 
     console.log(singeToy)
