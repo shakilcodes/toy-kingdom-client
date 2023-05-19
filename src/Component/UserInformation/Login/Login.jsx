@@ -1,11 +1,12 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
-
+    const [error, setError] = useState('')
     const { logIn, googleSignUp } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
@@ -21,22 +22,23 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
-                   navigate(from, {replace: true})
+                navigate(from, { replace: true })
                 //    setPassword('')
                 event.target.reset();
 
             })
             .catch(error => {
-                const errorFind = error;
+                const errorFind = error.message;
                 // setPassword(error.message)
                 console.log(error.message)
+                setError(errorFind)
 
             })
     }
     const provider = new GoogleAuthProvider();
     const googleLogIn = () => {
         googleSignUp(provider)
-        navigate(from, {replace: true})
+        navigate(from, { replace: true })
             .then(result => {
                 console.log(result)
             })
@@ -48,9 +50,10 @@ const Login = () => {
 
             <form onSubmit={handleLogin}>
                 <div className="hero pt-10">
-                    <div className="hero-content flex-col">
+                    <div className="hero-content w-96 flex-col">
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-orange-300">
-                            <div className="card-body">
+                            <div className="card-body h-[450px]">
+                                <h1 className='text-red-500'>{error}</h1>
                                 <div className="form-control">
                                     <p className='text-warning text-center'></p>
                                     <label className="label">

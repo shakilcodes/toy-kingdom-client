@@ -1,11 +1,13 @@
 import { updateProfile } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const SignUp = () => {
-
+    const [error, setError]= useState('')
+    
     const {signUp} = useContext(AuthContext)
     const navigate  = useNavigate()
     const hanleSignUp = (event) => {
@@ -32,10 +34,13 @@ const SignUp = () => {
         })
         .catch(error => {
             // setError(error.message)
-            console.log(error)
+            console.log(error.message)
+            const gotedError = error.message;
+            setError(gotedError)
+            
         })
     }
-
+    console.log(error)
     const updateName = (name, photo, user) =>{
         updateProfile(user, {
             displayName: name, photoURL: photo
@@ -52,32 +57,34 @@ const SignUp = () => {
             <h1 className='text-7xl mt-10 text-center font-bold text-orange-500'>SignUp Please</h1>
 
             <form onSubmit={hanleSignUp}>
+                
                 <div className="hero pt-10">
-                    <div className="hero-content flex-col">
+                    <div className="hero-content w-96 flex-col">
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-orange-300">
                             <div className="card-body">
+                                <h1 className='text-red-500'>{error}</h1>
                                 <div className="form-control">
                                     <p className='text-warning'></p>
                                     <label className="label">
-                                        <span className="label-text">Full Name (Optional)</span>
+                                        <span className="label-text">Full Name</span>
                                     </label>
                                     <input type="text" placeholder="name" name='name' className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Photo URL (Optional)</span>
+                                        <span className="label-text">Photo URL</span>
                                     </label>
                                     <input type="text" placeholder="Photo URL" name='photo' className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Email (Requred)</span>
+                                        <span className="label-text">Email</span>
                                     </label>
                                     <input type="text" placeholder="email" name='email' className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Password (Requred)</span>
+                                        <span className="label-text">Password</span>
                                     </label>
                                     <input type="password" placeholder="password" name='password' className="input input-bordered" required />
                                     <label className="label">
