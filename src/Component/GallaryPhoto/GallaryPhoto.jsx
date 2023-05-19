@@ -7,7 +7,7 @@ const GallaryPhoto = () => {
     const [toyGallary, setToy] = useState([])
 
     useEffect(() => {
-        fetch('https://toy-kingdom-server-openarahmed.vercel.app/allToys')
+        fetch('gallary.json')
             .then(res => res.json())
             .then(datas => setToy(datas))
     }, [])

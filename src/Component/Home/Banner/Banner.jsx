@@ -10,8 +10,8 @@ const Banner = () => {
                     <h1 className='text-7xl font-bold'>Kid's Car <br />Kingdom</h1>
                     <p>Experience the joy of playtime at Kid's Car Kingdom!</p>
                 </div>
-                <div>
-                    <img className='w-[800px] h-auto' src="./../../../../public/baner final.jpg" alt="" />
+                <div className='mx-auto'>
+                    <img className='w-[800px] h-auto' src="https://i.postimg.cc/s2w8ZGv2/baner-final.jpg" alt="" />
                 </div>
             </div>
         </div>

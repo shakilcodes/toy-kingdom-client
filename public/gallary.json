@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "picture": "https://i.postimg.cc/RhvXtGxj/Shutterstock-Ode-WK4-Jvw-N.jpg",
+      "price": 500
+    },
+    {
+      "id": "2",
+      "picture": "https://i.postimg.cc/QN0MvbdC/Shutterstock-ysa-G9-Kj-VPW.jpg",
+      "price": 599
+    },
+    {
+      "id": "3",
+      "picture": "https://i.postimg.cc/hGThXQRd/Shutterstock-z5rli-Mn-L1-B.jpg",
+      "price": 380
+    },
+    {
+      "id": "4",
+      "picture": "https://i.postimg.cc/fRCVMkpK/Shutterstock-Fqw-Ledn8vr.jpg",
+      "price": 100
+    },
+    {
+      "id": "5",
+      "picture": "https://i.postimg.cc/qqK9Gh2H/Shutterstock-2-FN8-YIyho-A.jpg",
+      "price": 120
+    },
+    {
+      "id": "6",
+      "picture": "https://i.postimg.cc/wxkP9pFV/steptodown-com947414.jpg",
+      "price": 400
+    }
+  ]
+  
