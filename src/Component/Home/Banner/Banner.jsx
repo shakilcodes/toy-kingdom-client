@@ -6,7 +6,8 @@ const Banner = () => {
     return (
         <div>
             <div className='banner-container'>
-            <img src={banner} alt="" />
+            {/* <img src={banner} alt="" /> */}
+            <h1>This is banner section</h1>
             </div>
         </div>
     );

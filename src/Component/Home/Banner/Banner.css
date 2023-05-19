@@ -1,3 +1,20 @@
-.banner-container{
+.banner-container {
     background-image: url(./../../../../Toys/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vw;
+    width: auto;
+    position: relative;
+}
+
+.banner-container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(160, 87, 87, 0.5));
+   
+    
 }
