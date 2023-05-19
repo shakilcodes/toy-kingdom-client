@@ -6,8 +6,8 @@ const Banner = () => {
     return (
         <div>
             <div className='banner-container'>
-            {/* <img src={banner} alt="" /> */}
-            <h1>This is banner section</h1>
+
+                <h1 className='text-[#F1755B] py-5 text-6xl font-bold xl text-center'>Wellcome to <br /> Toy KinGdom</h1>
             </div>
         </div>
     );
