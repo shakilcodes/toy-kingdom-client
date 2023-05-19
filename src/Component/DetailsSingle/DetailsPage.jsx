@@ -10,14 +10,14 @@ const DetailsPage = () => {
         fetch('https://toy-kingdom-server-openarahmed.vercel.app')
         .then(res => res.json())
     },[])
-    const {_id, toy_name, seller_name,description, sub_category, price,rating, quantity, seller_email } = singeToy;
+    const {_id, picture, toy_name, seller_name,description, sub_category, price,rating, quantity, seller_email } = singeToy;
 
     console.log(singeToy)
     return (
         <div className='mx-28'>
-            <h1 className='text-4xl font-bold my-10 text-center'>This is details a carted</h1>
+            <h1 className='text-4xl font-bold my-10 text-center'>Car's Details</h1>
             <div className='details-container'>
-            <img className='' src="./../../../Toys/truck 1.jpeg" alt="" />
+            <img className='h-[500px] w-[450px] mx-auto' src={picture} alt="" />
             </div>
             <p className='text-3xl font-semibold mt-10 mb-3'>{toy_name}</p>
             <p className='text-xl mt-1'><span className='font-bold'>Saller Name</span>: {seller_name}</p>

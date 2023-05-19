@@ -9,7 +9,7 @@ const DisplayMyToy = ({ toy, handleDelete }) => {
     return (
         <div className='myToys'>
             <div>
-                <img className='h-64 w-64' src="./../../../Toys/truck 1.jpeg" alt="" />
+                <img className='h-64 w-64' src={picture} alt="" />
             </div>
 
             <div>
@@ -23,8 +23,8 @@ const DisplayMyToy = ({ toy, handleDelete }) => {
                 <h1><span className='text-2xl font-bold'>Description</span>: {description}</h1>
             </div>
             <div className='flex flex-col gap-2'>
-               <Link to={`/update/${_id}`}> <button  className='btn'>Update</button></Link>
-                <button onClick={() => handleDelete(_id)} className='btn'>Remove</button>
+               <Link to={`/update/${_id}`}> <button  className='btn bg-[#EDA70E]'>Update</button></Link>
+                <button onClick={() => handleDelete(_id)} className='btn bg-[#EDA70E]'>Remove</button>
             </div>
 
         </div>
