@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./MyToys.css"
 
-const DisplayMyToy = ({ toy }) => {
+const DisplayMyToy = ({ toy, handleDelete }) => {
     const { _id, picture, seller_email, rating, toy_name, seller_name, sub_category, price, quantity, description } = toy;
-
+    console.log(toy)
+   
     return (
         <div className='myToys'>
             <div>
@@ -21,8 +23,8 @@ const DisplayMyToy = ({ toy }) => {
                 <h1><span className='text-2xl font-bold'>Description</span>: {description}</h1>
             </div>
             <div className='flex flex-col gap-2'>
-            <button className='btn'>Update</button>
-            <button className='btn'>Remove</button>
+               <Link to={`/update/${_id}`}> <button  className='btn'>Update</button></Link>
+                <button onClick={() => handleDelete(_id)} className='btn'>Remove</button>
             </div>
 
         </div>

@@ -1,11 +1,15 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
 
-    const {logIn, googleSignUp} = useContext(AuthContext)
+    const { logIn, googleSignUp } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from.pathname || '/'
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -13,29 +17,30 @@ const Login = () => {
         const password = event.target.password.value
         console.log(email, password)
         logIn(email, password)
-        
-        .then(result=>{
-            const loggedUser = result.user;
-            console.log(loggedUser)
-        //    navigate(from, {replace: true})
-        //    setPassword('')
-           event.target.reset();
-           
-        })
-        .catch(error => {
-            const errorFind = error;
-            // setPassword(error.message)
-            console.log(error.message)
-            
-        })
+
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser)
+                   navigate(from, {replace: true})
+                //    setPassword('')
+                event.target.reset();
+
+            })
+            .catch(error => {
+                const errorFind = error;
+                // setPassword(error.message)
+                console.log(error.message)
+
+            })
     }
     const provider = new GoogleAuthProvider();
-    const googleLogIn = () =>{
+    const googleLogIn = () => {
         googleSignUp(provider)
-        .then(result => {
-            console.log(result)
-        })
-        .catch(error => console.log(error))
+        navigate(from, {replace: true})
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.log(error))
     }
     return (
         <div>
@@ -77,10 +82,10 @@ const Login = () => {
                 <div className='text-center mt-5 text-white font-bold'>
                     <button onClick={googleLogIn} className='mx-auto bg-orange-400 p-4 px-10 rounded-md'>Login with Google</button>
                 </div>
-                
+
             </div>
         </div>
-      
+
     );
 };
 

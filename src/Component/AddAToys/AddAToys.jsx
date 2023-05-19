@@ -1,17 +1,19 @@
 import React from 'react';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const AddAToys = () => {
     const { user, loading } = useContext(AuthContext)
     if (loading) {
-        return
+        return 'Loading............'
     }
+    const navigate = useNavigate()
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.target;
         const picture = form.url.value;
-        const toyName = form.toyName.value
+        const toy_name = form.toyName.value
         const sub_category = form.subToys.value
         const price = form.Price.value
         const rating = form.Ratings.value
@@ -19,9 +21,9 @@ const AddAToys = () => {
         const description = form.Description.value
         const seller_name = user?.displayName
         const seller_email = user?.email
-        const inputValues = {picture, toyName, sub_category, price, rating, quantity, description, seller_name, seller_email }
+        const inputValues = {picture, toy_name, sub_category, price, rating, quantity, description, seller_name, seller_email }
         console.log(inputValues)
-        fetch('https://toy-kingdom-server.vercel.app/postToys',{
+        fetch('https://toy-kingdom-server-openarahmed.vercel.app/postToys',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -30,7 +32,11 @@ const AddAToys = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data._id)
+            if(data.insertedId){
+               alert ('successfully added new toy')
+            }
+            navigate('/myToys')
         })
     }
 
@@ -75,9 +81,11 @@ const AddAToys = () => {
                         <label className='text-xl font-bold p-2'>Quantity: </label>
                         <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-8' type="text" placeholder='Toy Quantity' name='Quantity' />
                     </div>
-                    <div>
+                    <div className='flex items-center'>
                         <label className='text-xl font-bold p-2'>Description: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-1' placeholder='Description' type="text" name='Description' />
+                        <textarea className='bg-gray-200 rounded-md p-2' name="Description" placeholder='Description' id="" cols="87" rows="5"></textarea>
+
+                
                     </div>
 
 

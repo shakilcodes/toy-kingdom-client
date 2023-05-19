@@ -1,10 +1,15 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import "./DetailsPage.css"
 
 const DetailsPage = () => {
     const singeToy = useLoaderData()
     console.log(singeToy)
+    useEffect(()=>{
+        fetch('https://toy-kingdom-server-openarahmed.vercel.app')
+        .then(res => res.json())
+    },[])
     const {_id, toy_name, seller_name,description, sub_category, price,rating, quantity, seller_email } = singeToy;
 
     console.log(singeToy)

@@ -4,7 +4,6 @@ import DisplayAllToys from './DisplayAllToys';
 
 const AllToys = () => {
     const toys = useLoaderData();
-    console.log(toys)
     return (
         <div className='mx-28'>
             <h1 className='mt-10 text-4xl text-center'>All Toys</h1>

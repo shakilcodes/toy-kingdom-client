@@ -17,6 +17,8 @@ import AddAToys from './Component/AddAToys/AddAToys.jsx';
 import Blogs from './Component/Blogs/Blogs.jsx';
 import AllToys from './Component/AllToys/AllToys.jsx';
 import DetailsPage from './Component/DetailsSingle/DetailsPage.jsx';
+import UpdateToy from './Component/UpdateToy/UpdateToy.jsx';
+import PrivetRoute from './Component/ProvetRoute/PrivetRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -34,11 +36,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'myToys',
-        element: <MyToy></MyToy>
+        element: <PrivetRoute><MyToy></MyToy></PrivetRoute>
       },
       {
         path: 'addAToys',
-        element: <AddAToys></AddAToys>
+        element: <PrivetRoute><AddAToys></AddAToys></PrivetRoute>
       },
       {
         path: 'blogs',
@@ -51,12 +53,17 @@ const router = createBrowserRouter([
       {
         path: 'allToys',
         element: <AllToys></AllToys>,
-        loader: ()=> fetch('https://toy-kingdom-server.vercel.app/allToys')
+        loader: ()=> fetch('https://toy-kingdom-server-openarahmed.vercel.app/allToys')
       },
       {
         path: "/details/:id",
-        element: <DetailsPage></DetailsPage>,
-        loader: ({params})=> fetch(`https://toy-kingdom-server.vercel.app/allToys/${params.id}`)
+        element: <PrivetRoute><DetailsPage></DetailsPage></PrivetRoute>,
+        loader: ({params})=> fetch(`https://toy-kingdom-server-openarahmed.vercel.app/allToys/${params.id}`)
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateToy></UpdateToy>,
+        loader: ({params})=> fetch(`https://toy-kingdom-server-openarahmed.vercel.app/allToys/${params.id}`)
       }
     ]
   },
