@@ -9,29 +9,34 @@ import DisplayAllToys from './DisplayAllToys';
 
 const AllToys = () => {
     useTitle('AllToys')
+    // const datas = useLoaderData()
+    // console.log(datas)
     const [allToys, setAllToys] = useState([])
     const [searchText, setSearchText] =useState('')
-    console.log(searchText)
-    const handleSearch = (e)=>{
-        fetch(`https://toy-kingdom-server.vercel.app/searchByTitle/${searchText}`)
-        .then(res => res.json())
-        .then(searchData => setAllToys(searchData))
 
-    }
+
     useEffect(()=>{
         fetch('https://toy-kingdom-server.vercel.app/allToys')
         .then(res => res.json())
         .then(toys => setAllToys(toys))
     },[])
 
+    const handleSearch = (e)=>{
+        fetch(`https://toy-kingdom-server.vercel.app/searchByTitle/${searchText}`)
+        .then(res => res.json())
+        .then(searchData => setAllToys(searchData))
+
+    }
+    
+
     const sortByPrice = () =>{
         fetch('https://toy-kingdom-server.vercel.app/allToysSort')
         .then(res => res.json())
         .then(datas => setAllToys(datas))
     }
-    useEffect(()=>{
+    // useEffect(()=>{
        
-    },[])
+    // },[])
     return (
         <div className='mx-28'>
             <h1 className='mt-10 text-4xl text-center font-bold'>All Toys</h1>
