@@ -5,7 +5,7 @@ import banner from './../../../../public/banner.jpg'
 const Banner = () => {
     return (
         <div className='banner-container ' >
-            <div className='banner justify-between items-center ml-32'>
+            <div className='banner justify-between items-center ml-32 '>
                 <div data-aos="fade-right" data-aos-easing="linear"
                     data-aos-duration="1000">
                     <h1 className='text-7xl font-bold'>Kid's Car <br />Kingdom</h1>

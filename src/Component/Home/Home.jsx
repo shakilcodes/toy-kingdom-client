@@ -1,4 +1,6 @@
 import React from 'react';
+import OffSection from '../ExraTwoSection/OffSection/OffSection';
+import RecentCar from '../ExraTwoSection/RecentCar';
 import GallaryPhoto from '../GallaryPhoto/GallaryPhoto';
 import useTitle from '../Hooks/useTitle';
 import TabSection from '../Tab/TabSection';
@@ -11,6 +13,8 @@ const Home = () => {
             <Banner></Banner>
             <GallaryPhoto></GallaryPhoto>
             <TabSection></TabSection>
+            <RecentCar></RecentCar>
+            <OffSection></OffSection>
         </div>
     );
 };
