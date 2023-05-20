@@ -37,7 +37,7 @@ const TabSection = () => {
         <div>
             <h1 className='text-4xl font-bold text-center my-16'></h1>
             <div className='text-center'>
-                <Tabs>
+                <Tabs >
                     <h1 className='text-4xl font-semibold mt-28 mb-10'>Car Sub-Category</h1>
                     <TabList>
                         <Tab>

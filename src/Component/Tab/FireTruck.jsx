@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 const FireTruck = ({ fireTruck }) => {
     const {_id,picture, toy_name, seller_name, sub_category, price, quantity, ratings } = fireTruck;
     return (
-        <div>
+        <div className='text-center' data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000">
             <div className="card w-96 h-[500px] bg-base-100 shadow-xl">
                 <figure><img className='w-[400px] h-[400px]' src={picture} alt="Shoes" /></figure>
                 <div className="text-start p-5">
