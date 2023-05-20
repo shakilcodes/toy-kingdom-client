@@ -2,8 +2,10 @@ import React from 'react';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const AddAToys = () => {
+    useTitle('AddaToy')
     const { user, loading } = useContext(AuthContext)
     if (loading) {
         return 'Loading............'

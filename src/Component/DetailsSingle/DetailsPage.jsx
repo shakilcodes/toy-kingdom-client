@@ -1,9 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../Hooks/useTitle';
 import "./DetailsPage.css"
 
 const DetailsPage = () => {
+    useTitle('Details')
     const singeToy = useLoaderData()
     useEffect(()=>{
         fetch('https://toy-kingdom-server.vercel.app')

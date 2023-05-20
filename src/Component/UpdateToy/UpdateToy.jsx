@@ -2,8 +2,10 @@ import React from 'react';
 import { useContext } from 'react';
 import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 import AuthProvider, { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const UpdateToy = () => {
+    useTitle('Update')
     const { loading } = useContext(AuthContext)
     const navigate = useNavigate()
     const { id } = useParams()

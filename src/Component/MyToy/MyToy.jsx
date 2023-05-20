@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 import DisplayMyToy from './DisplayMyToy';
 
 
 const MyToy = () => {
+    useTitle('MyToys')
     const { user, loading } = useContext(AuthContext)
     if (loading) {
         return
