@@ -17,7 +17,7 @@ const TabSection = () => {
     const [regular, setregular] = useState([])
     const [fireTruck, setFiretruck] = useState([])
     useEffect(() => {
-        fetch('https://toy-kingdom-server-openarahmed.vercel.app/allToys')
+        fetch('https://toy-kingdom-server.vercel.app/allToys')
             .then(res => res.json())
             .then(datas => setdata(datas))
         const policeCar = data.filter(d => d.sub_category == 'Police Car')

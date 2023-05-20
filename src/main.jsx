@@ -60,17 +60,17 @@ const router = createBrowserRouter([
       {
         path: 'allToys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('https://toy-kingdom-server-openarahmed.vercel.app/allToys')
+        loader: () => fetch('https://toy-kingdom-server.vercel.app/allToys')
       },
       {
         path: "/details/:id",
         element: <PrivetRoute><DetailsPage></DetailsPage></PrivetRoute>,
-        loader: ({ params }) => fetch(`https://toy-kingdom-server-openarahmed.vercel.app/allToys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-kingdom-server.vercel.app/allToys/${params.id}`)
       },
       {
         path: '/update/:id',
         element: <UpdateToy></UpdateToy>,
-        loader: ({ params }) => fetch(`https://toy-kingdom-server-openarahmed.vercel.app/allToys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-kingdom-server.vercel.app/allToys/${params.id}`)
       },
 
     ]

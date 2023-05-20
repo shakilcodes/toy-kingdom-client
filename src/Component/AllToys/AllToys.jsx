@@ -10,13 +10,13 @@ const AllToys = () => {
     const [searchText, setSearchText] =useState('')
     console.log(searchText)
     const handleSearch = (e)=>{
-        fetch(`http://localhost:5010/searchByTitle/${searchText}`)
+        fetch(`https://toy-kingdom-server.vercel.app/searchByTitle/${searchText}`)
         .then(res => res.json())
         .then(searchData => setAllToys(searchData))
 
     }
     useEffect(()=>{
-        fetch('https://toy-kingdom-server-openarahmed.vercel.app/allToys')
+        fetch('https://toy-kingdom-server.vercel.app/allToys')
         .then(res => res.json())
         .then(toys => setAllToys(toys))
     },[])
@@ -27,13 +27,13 @@ const AllToys = () => {
             <input onChange={(e)=> setSearchText(e.target.value)} className='bg-gray-300 w-1/4 h-12 rounded-xl p-5' type="text" name="searchValue" placeholder='Search By Toy Name' id=""></input>
             <button onClick={handleSearch} className='btn'>Search</button>
             </div>
-            <div className='grid grid-cols-3 my-24 justify-center gap-5 items-center'>
+            <div className='grid  my-24 justify-center gap-5 items-center'>
             {
-                allToys?.map(d => 
+               
                 <DisplayAllToys
-                key={d._id}
-                toy={d}
-                ></DisplayAllToys>)
+                
+                toy={allToys}
+                ></DisplayAllToys>
             }
             </div>
         </div>

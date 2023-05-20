@@ -14,7 +14,7 @@ const MyToy = () => {
     }
     const [myToys, setMyToys] = useState([])
     useEffect(() => {
-        fetch(`https://toy-kingdom-server-openarahmed.vercel.app/singleToys/${user?.email}`)
+        fetch(`https://toy-kingdom-server.vercel.app/singleToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
@@ -24,7 +24,7 @@ const MyToy = () => {
     const handleDelete = (id) => {
         const deleleConfirm = confirm('Do you want to delete this toy?')
         if (deleleConfirm) {
-            fetch(`https://toy-kingdom-server-openarahmed.vercel.app/allToys/${id}`, {
+            fetch(`https://toy-kingdom-server.vercel.app/allToys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

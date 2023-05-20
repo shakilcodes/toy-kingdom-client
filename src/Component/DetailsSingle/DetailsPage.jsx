@@ -5,9 +5,8 @@ import "./DetailsPage.css"
 
 const DetailsPage = () => {
     const singeToy = useLoaderData()
-    console.log(singeToy)
     useEffect(()=>{
-        fetch('https://toy-kingdom-server-openarahmed.vercel.app')
+        fetch('https://toy-kingdom-server.vercel.app')
         .then(res => res.json())
     },[])
     const {_id, picture, toy_name, seller_name,description, sub_category, price,rating, quantity, seller_email } = singeToy;
