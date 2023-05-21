@@ -18,6 +18,8 @@ const DisplayMyToy = ({ toy, handleDelete }) => {
                 <h1>Seller email: {seller_email}</h1>
                 <h1>Sub-Toys: {sub_category}</h1>
                 <h1>Ratings: {rating}</h1>
+                <h1>Price: {price}</h1>
+                <h1>Quantity: {quantity}</h1>
             </div>
             <div>
                 <h1><span className='text-2xl font-bold'>Description</span>: {description}</h1>

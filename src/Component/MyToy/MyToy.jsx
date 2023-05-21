@@ -39,7 +39,7 @@ const MyToy = () => {
     }
     return (
         <div>
-            <h1 className='mt-32 text-4xl text-center'>My Toys</h1>
+            <h1 className='mt-10 text-4xl text-center font-bold'>My Toys</h1>
             <div className='mx-28 grid gap-5'>
                 {
                     myToys?.map(d => <DisplayMyToy key={d._id} toy={d} handleDelete={handleDelete}></DisplayMyToy>)

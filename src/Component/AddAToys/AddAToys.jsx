@@ -43,49 +43,49 @@ const AddAToys = () => {
     }
 
     return (
-        <div className='mx-28'>
+        <div className='mx-28 '>
             <h1 className='my-10 font-bold text-4xl text-center'>Add Your Toys</h1>
             <form onSubmit={handleSubmit}>
-                <div className='flex flex-col gap-5'>
+                <div className='flex flex-col gap-5 justify-center items-center'>
 
                     <div>
                         <label className='text-xl font-bold p-2'>Toy URL:</label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-10' type="text" placeholder='Your Toy Photo URL' name='url' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-10' type="text" placeholder='Your Toy Photo URL' name='url' />
                     </div>
 
 
                     <div>
                         <label className='text-xl font-bold p-2'>Toy Name  :</label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-5' type="text" placeholder='Your Toy Name' name='toyName' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-5' type="text" placeholder='Your Toy Name' name='toyName' />
 
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Saller Name: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md' type="text" defaultValue={user?.displayName} />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md' type="text" defaultValue={user?.displayName} />
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Saller Email: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-1' type="text" defaultValue={user?.email} />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-1' type="text" defaultValue={user?.email} />
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Sub-Toys: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-6' type="text" placeholder='Sub-Toys' name='subToys' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-6' type="text" placeholder='Sub-Toys' name='subToys' />
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Price: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-16' type="text" placeholder='Price' name='Price' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-16' type="text" placeholder='Price' name='Price' />
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Ratings: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-10' type="text" placeholder='Ratings' name='Ratings' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-10' type="text" placeholder='Ratings' name='Ratings' />
                     </div>
                     <div>
                         <label className='text-xl font-bold p-2'>Quantity: </label>
-                        <input className='bg-gray-200 w-9/12 p-2 rounded-md ms-8' type="text" placeholder='Toy Quantity' name='Quantity' />
+                        <input className='bg-gray-200 w-[700px] p-2 rounded-md ms-8' type="text" placeholder='Toy Quantity' name='Quantity' />
                     </div>
                     <div className='flex items-center'>
                         <label className='text-xl font-bold p-2'>Description: </label>
-                        <textarea className='bg-gray-200 rounded-md p-2' name="Description" placeholder='Description' id="" cols="87" rows="5"></textarea>
+                        <textarea className='bg-gray-200 w-[700px] rounded-md p-2' name="Description" placeholder='Description' id="" cols="87" rows="5"></textarea>
 
                 
                     </div>

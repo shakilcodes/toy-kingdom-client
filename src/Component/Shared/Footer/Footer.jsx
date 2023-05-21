@@ -9,12 +9,13 @@ const Footer = () => {
                 <div className='footer-container'>
                     <div className='md:flex justify-around gap-12 footer-info md:mx-32 text-center pt-20 pb-10'>
                         <div>
+                            <img className='mx-auto w-36 h-28' src="https://i.postimg.cc/fLm9yNRX/toys-logo.png" alt="" />
                             <h1 className='text-3xl font-bold mb-5'>Toy Kingdom</h1>
-                            <p className='mb-5'>There are many variations of passages <br /> of Lorem Ipsum , but the majority have <br /> suffered alteration in some form.</p>
-                            <img className='mx-auto' src="" alt="" />
-                            <div className='flex'>
-                               <a href=""> <img className='h-10 w-10' src="./../../../../public/facebook.svg" alt="" /></a>
-                                <a href=""><img className='h-10 w-10' src="./../../../../public/instagram.svg" alt="" /></a>
+                            <p className='mb-5'>Toy Kingdom website: A magical <br /> online store for kids and <br /> kids-at-heart, offering a wide <br /> selection of toys, games, and more.</p>
+                            <div className='flex justify-center items-center'>
+                               <a href="https://www.facebook.com/shakilopenar"> <img className='h-10 w-10' src="https://i.postimg.cc/zfX9LgJn/Pngtree-facebook-social-media-icon-8704814.png" target="_blank" alt="" /></a>
+                                <a href="https://www.instagram.com/"><img className='h-10 w-10' src="https://i.postimg.cc/SRqLsW44/pngwing-com.png" alt="" /></a>
+                                <a href="https://twitter.com/"><img className='h-10 w-10' src="https://i.postimg.cc/7YS69pSK/pngwing-com-1.png" alt="" /></a>
                             </div>
                         </div>
                         <div>
@@ -42,7 +43,7 @@ const Footer = () => {
                 </div>
                 <div className=' flex justify-between mx-32 my-10'>
                     <h1>@2023 Toy Kingdom. All Rights Reserved</h1>
-                    <h1>Powered by Job Toy Kingdom</h1>
+                    <h1>Powered by Toy Kingdom</h1>
                 </div>
             </div>
         </div>
