@@ -36,8 +36,8 @@ const Header = () => {
                             </ul>
                         </div>
                         <div>
-                            <img className='w-24 h-15' src={logo} alt="" />
-                            <h1 className='text-black font-bold'>Toy Kingdom</h1>
+                            <Link to='/'><img className='w-24 h-15' src={logo} alt="" />
+                            <h1 className='text-black font-bold'>Toy Kingdom</h1></Link>
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
