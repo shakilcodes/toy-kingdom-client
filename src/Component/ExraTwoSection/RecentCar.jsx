@@ -2,9 +2,9 @@ import React from 'react';
 
 const RecentCar = () => {
     return (
-        <div className='mx-28'>
+        <div className='md:mx-28'>
             <h1 className='text-5xl text-center font-bold my-10 mt-20'>Recent Car</h1>
-            <section className='flex gap-10 justify-center items-center'>
+            <section className='md:flex gap-10 justify-center items-center'>
                 <div className="card card-compact w-96 bg-base-100 shadow-xl">
                     <figure><img src="https://i.postimg.cc/kgQDRHCS/Shutterstock-S3luig-TOFZ.jpg" alt="" /></figure>
                     <div className="card-body">

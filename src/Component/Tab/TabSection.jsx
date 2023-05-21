@@ -55,21 +55,21 @@ const TabSection = () => {
                     </TabList>
 
                     <TabPanel>
-                        <div className='mx-32 flex justify-center mt-10 gap-20'>
+                        <div className='md:mx-32 md:flex justify-center mt-10 gap-20'>
                             {
                                 fireTruck.map(d => <FireTruck key={d._id} fireTruck={d}></FireTruck>)
                             }
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className='mx-32 flex justify-center mt-10 gap-20'>
+                        <div className='md:mx-32 md:flex justify-center mt-10 gap-20'>
                             {
                                 regular.map(d => <RegularCar key={d._id} regular={d}></RegularCar>)
                             }
                         </div>
                     </TabPanel>
                     <TabPanel>
-                        <div className='mx-32 flex justify-center mt-10 gap-20'>
+                        <div className='md:mx-32 md:flex justify-center mt-10 gap-20'>
                             {
                                 police.map(d => <Police key={d._id} police={d}></Police>)
                             }

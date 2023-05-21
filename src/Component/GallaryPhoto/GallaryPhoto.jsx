@@ -14,7 +14,7 @@ const GallaryPhoto = () => {
     return (
         <div>
             <h1 className='text-5xl text-center font-bold mt-20 mb-10'>Gallary</h1>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 mx-28 gap-5' >
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:mx-28 gap-5' >
                 {
                     toyGallary.map(d => <DisplayGallary key={d._id} toy={d}></DisplayGallary>)
                 }

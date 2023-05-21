@@ -23,8 +23,8 @@ const DisplayMyToy = ({ toy, handleDelete }) => {
                 <h1><span className='text-2xl font-bold'>Description</span>: {description}</h1>
             </div>
             <div className='flex flex-col gap-2'>
-               <Link to={`/update/${_id}`}> <button  className='btn bg-[#EDA70E]'>Update</button></Link>
-                <button onClick={() => handleDelete(_id)} className='btn bg-[#EDA70E]'>Remove</button>
+               <Link to={`/update/${_id}`}> <button  className='btn w-28 bg-[#EDA70E]'>Update</button></Link>
+                <button onClick={() => handleDelete(_id)} className='btn bg-red-500 w-28'>Remove</button>
             </div>
 
         </div>
