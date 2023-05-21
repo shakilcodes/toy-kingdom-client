@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import logo from './../../../../public/toys logo.png'
+import { Tooltip } from 'react-tooltip'
+
 
 const Header = () => {
     const { logOut, user } = useContext(AuthContext)
@@ -55,7 +57,11 @@ const Header = () => {
                     <div className="navbar-end  flex gap-2">
                         <div>
                             {
-                                user ? <img className='h-12 w-12 rounded-full' src={user?.photoURL} alt="" /> : ""
+                                user ?  <div><a className="my-anchor-element" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName}>
+                                <img className='h-12 w-12 rounded-full' src={user?.photoURL} alt="" />
+                              </a></div> : ""
+
+                                
                             }
                         </div>
                         <div className='text-xl font-semibold'>
@@ -66,6 +72,8 @@ const Header = () => {
                             }
                         </div>
                     </div>
+                    <Tooltip id="my-tooltip" />
+
                 </div>
             </div>
         </div>

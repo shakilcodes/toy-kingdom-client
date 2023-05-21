@@ -13,7 +13,7 @@ const Banner = () => {
                 </div>
                 <div className='mx-auto' data-aos="fade-left" data-aos-easing="linear"
                     data-aos-duration="1000">
-                    <img className='w-[800px] h-auto' src="https://i.postimg.cc/s2w8ZGv2/baner-final.jpg" alt="" />
+                    <img className='w-[800px] h-auto' src="https://i.postimg.cc/9FyFLmmS/baner-final.jpg" alt="" />
                 </div>
             </div>
         </div>

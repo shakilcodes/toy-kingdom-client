@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css'
 
-
+// done
 const Footer = () => {
     return (
         <div className='footer-main mt-32 footer-main'>
