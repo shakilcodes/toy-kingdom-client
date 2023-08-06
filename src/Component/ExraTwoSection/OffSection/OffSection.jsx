@@ -3,8 +3,8 @@ import './OffSection.css'
 
 const OffSection = () => {
     return (
-        <div className='md:mx-20'>
-            <h1 className='text-5xl text-center font-bold my-10 mt-20'>Offers</h1>
+        <div className=' max-w-[1280px] mx-auto'>
+            <h1 className='text-5xl text-center font-bold py-10 pt-28'>Offers</h1>
             <section className='md:flex'>
                 <section className='offSection'>
                     <div className='md:flex flex-col items-start pt-20 ps-5'>

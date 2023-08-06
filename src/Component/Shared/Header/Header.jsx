@@ -20,8 +20,8 @@ const Header = () => {
     }
     return (
         <section className=''>
-            <div className='bg-[#eea70f] drop-shadow-lg fixed top-0 right-0 left-0 buttom-0 z-10'>
-                <div className='md:mx-28 text-white'>
+            <div className=' drop-shadow-lg fixed top-0 right-0 left-0 buttom-0 z-10'>
+                <div className='md:mx-28 text-black font-bold'>
                     <div className="navbar max-w-[1280px] mx-auto">
                         <div className="navbar-start">
                             <div className="dropdown">

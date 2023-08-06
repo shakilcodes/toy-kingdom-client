@@ -16,14 +16,14 @@ const RegularCar = ({regular}) => {
         <div className='text-center' data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1000">
-            <div className="card w-96 h-[500px] bg-base-100 shadow-xl">
+            <div className="card w-[300px] h-[400px] bg-base-100 shadow-xl">
                 <figure><img className='w-[400px] h-[400px]' src={picture} alt="Shoes" /></figure>
                 <div className="text-start p-5">
                     <h2 className="card-title">{toy_name}</h2>
                     <p>Price: {price}</p>
                     <p>Ratings: {rating}</p>
                     <div className="text-center">
-                    <Link onClick={handleNotification} to={`/details/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+                    <Link onClick={handleNotification} to={`/details/${_id}`}> <button className="btn-sm rounded-xl mt-3 bg-[#ffaf00]">View Details</button></Link>
                     </div> 
                 </div>
             </div>

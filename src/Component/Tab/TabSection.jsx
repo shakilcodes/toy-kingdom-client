@@ -34,22 +34,22 @@ const TabSection = () => {
         return
     }
     return (
-        <div>
-            <h1 className='text-4xl font-bold text-center my-16'></h1>
+        <div className='pb-20'>
+            <h1 className='text-4xl font-bold text-center py-1'></h1>
             <div className='text-center'>
                 <Tabs >
-                    <h1 className='text-4xl font-semibold mt-28 mb-10'>Shop by category</h1>
+                    <h1 className='text-4xl font-semibold mt-20 mb-10'>Shop by category</h1>
                     <TabList>
                         <Tab>
-                            <img className='h-24 w-24 rounded-full' src="https://i.postimg.cc/hGThXQRd/Shutterstock-z5rli-Mn-L1-B.jpg" alt="" />
+                            <img className='h-16 w-16 rounded-full' src="https://i.postimg.cc/hGThXQRd/Shutterstock-z5rli-Mn-L1-B.jpg" alt="" />
                             <h1 className='text-xl font-semibold'>Fire Truck</h1>
                         </Tab>
                         <Tab>
-                            <img className='h-24 w-24 rounded-full' src="https://i.postimg.cc/QN0MvbdC/Shutterstock-ysa-G9-Kj-VPW.jpg" alt="" />
+                            <img className='h-16 w-16 rounded-full' src="https://i.postimg.cc/QN0MvbdC/Shutterstock-ysa-G9-Kj-VPW.jpg" alt="" />
                             <h1 className='text-xl font-semibold'>Regular Car</h1>
                         </Tab>
                         <Tab>
-                            <img className='h-24 w-24 rounded-full' src="https://i.postimg.cc/fRCVMkpK/Shutterstock-Fqw-Ledn8vr.jpg" alt="" />
+                            <img className='h-16 w-16 rounded-full' src="https://i.postimg.cc/fRCVMkpK/Shutterstock-Fqw-Ledn8vr.jpg" alt="" />
                             <h1 className='text-xl font-semibold'>Police Car</h1>
                         </Tab>
                     </TabList>

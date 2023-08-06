@@ -8,7 +8,7 @@ import Header from '../Shared/Header/Header';
 const Root = () => {
     return (
         <div>
-            <div className='pb-16'>
+            <div className=''>
                 <Header></Header>
             </div>
             <Outlet></Outlet>

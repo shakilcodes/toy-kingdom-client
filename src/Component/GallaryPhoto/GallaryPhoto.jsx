@@ -12,9 +12,9 @@ const GallaryPhoto = () => {
             .then(datas => setToy(datas))
     }, [])
     return (
-        <div>
-            <h1 className='text-5xl text-center font-bold mt-20 mb-10'>Gallary</h1>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 md:mx-28 gap-5' >
+        <div className='max-w-[1280px] mx-auto pb-28'>
+            <h1 className='text-5xl text-center font-bold pt-20 pb-10'>Gallary</h1>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-5' >
                 {
                     toyGallary.map(d => <DisplayGallary key={d._id} toy={d}></DisplayGallary>)
                 }
