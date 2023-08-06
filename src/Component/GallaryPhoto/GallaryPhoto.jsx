@@ -19,6 +19,7 @@ const GallaryPhoto = () => {
                     toyGallary.map(d => <DisplayGallary key={d._id} toy={d}></DisplayGallary>)
                 }
             </div>
+            <span id='category'></span>
         </div>
     );
 };

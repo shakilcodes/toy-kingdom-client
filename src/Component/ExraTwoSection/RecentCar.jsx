@@ -36,6 +36,7 @@ const RecentCar = () => {
                     </div>
                 </div>
             </section>
+            <span id='offer'></span>
         </div>
     );
 };

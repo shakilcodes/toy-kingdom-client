@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                     <hr className='mx-32' />
                 </div>
-                <div className=' flex justify-between mx-32 my-10'>
+                <div className=' flex justify-between mx-32 py-10'>
                     <h1>@2023 Toy Kingdom. All Rights Reserved</h1>
                     <h1>Powered by Toy Kingdom</h1>
                 </div>
