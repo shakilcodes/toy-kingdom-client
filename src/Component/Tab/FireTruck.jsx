@@ -12,11 +12,11 @@ const FireTruck = ({ fireTruck }) => {
         }
     }
     return (
-        <div className='text-center' data-aos="fade-down"
+        <div className='text-center mx-3 md:mx-0' data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1000">
-            <div className="card w-[300px] h-[400px] bg-base-100 shadow-xl">
-                <figure><img className='w-[300px] h-[300px]' src={picture} alt="Shoes" /></figure>
+            <div className="card md:w-[300px] md:h-[400px] bg-base-100 shadow-xl">
+                <figure><img className='md:w-[300px] w-[350px] px-5 md:px-0 h-[300px] rounded-2xl mt-5' src={picture} alt="Shoes" /></figure>
                 <div className="text-start p-5">
                     <h2 className="card-title">{toy_name}</h2>
                     <p>Price: {price}</p>

@@ -29,7 +29,7 @@ const DisplayAllToys = ({ toy }) => {
                             <td>{toy.map(d => <p className='border border-black text-2xl mb-2 p-2 bg-yellow-100'>{d.sub_category}</p>)}</td>
                             <td>{toy.map(d => <p className='border border-black text-2xl mb-2 p-2 bg-gray-300'> ${d.price}</p>)}</td>
                             <td>{toy.map(d => <p className='border border-black text-2xl mb-2 p-2'> {d.quantity}</p>)}</td>
-                            <td>{toy.map(d => <p className=' text-2xl mb-2 p-2'> <Link to={`/details/${d._id}`}><button className=" bg-orange-300 h-9 px-1 rounded-lg">View Details</button></Link></p>)}</td>
+                            <td>{toy.map(d => <p className=' text-2xl mb-2 p-2'> </p>)}</td>
                             
                         </tr>
                     </tbody>

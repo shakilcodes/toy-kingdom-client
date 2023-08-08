@@ -19,7 +19,7 @@ const Header = () => {
             })
     }
     return (
-        <section className=''>
+        <section className='bg-[#BEC6A5]'>
             <div className=' drop-shadow-lg fixed top-0 right-0 left-0 buttom-0 z-10'>
                 <div className='md:mx-28 text-black font-bold'>
                     <div className="navbar max-w-[1280px] mx-auto">
@@ -48,7 +48,7 @@ const Header = () => {
                                 <li><Link to='/allToys'>All Toys</Link></li>
                                 <li><a href='#category'>Category</a></li>
                                 <li><a href='#offer'>Offer</a></li>
-                                <li><Link to='/allToys'>All Toys</Link></li>
+                                <li><Link to='/aboutus'>About us</Link></li>
                                 {
                                     user ? <li><Link to='/myToys'>My Toys</Link></li> : ""
                                 }

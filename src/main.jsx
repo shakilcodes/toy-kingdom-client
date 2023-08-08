@@ -20,6 +20,7 @@ import DetailsPage from './Component/DetailsSingle/DetailsPage.jsx';
 import UpdateToy from './Component/UpdateToy/UpdateToy.jsx';
 import PrivetRoute from './Component/ProvetRoute/PrivetRoute.jsx';
 import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
+import AboutUs from './Component/AboutUs/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: 'blogs',
         element: <Blogs></Blogs>
+      },
+      {
+        path: 'aboutus',
+        element: <AboutUs></AboutUs>
       },
 
       
