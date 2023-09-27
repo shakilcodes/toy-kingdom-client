@@ -29,7 +29,7 @@ const HowToBuy = () => {
 
                 </div>
                 <div className='text-center py-5 md:py-16'>
-                    <button className='btn bg-[#FFAF00] '>Get started</button>
+                    <button className='btn bg-[#FFAF00] hover:bg-orange-400'>Get started</button>
                 </div>
             </div>
         </section>

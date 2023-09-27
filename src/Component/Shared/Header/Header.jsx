@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -7,6 +7,24 @@ import { Tooltip } from 'react-tooltip'
 
 
 const Header = () => {
+    const [scrolling, setScrolling] = useState(false)
+
+    const srollingHandle = () => {
+        if(window.scrollY > 0 ){
+            setScrolling(true)
+        }else{
+            setScrolling(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', srollingHandle)
+        return ()=>{
+            window.removeEventListener('scroll', srollingHandle)
+        }
+    }, [])
+    const navbarClasses = `fixed top-0 right-0 left-0 buttom-0 z-10 
+    ${scrolling ? 'bg-black bg-opacity-[75%] text-white' : 'text-black'}`
     const { logOut, user } = useContext(AuthContext)
 
     const signOut = () => {
@@ -20,8 +38,8 @@ const Header = () => {
     }
     return (
         <section className='bg-[#BEC6A5]'>
-            <div className=' drop-shadow-lg fixed top-0 right-0 left-0 buttom-0 z-10'>
-                <div className='md:mx-28 text-black font-bold'>
+            <div className={navbarClasses}>
+                <div className='md:mx-28  font-bold'>
                     <div className="navbar max-w-[1280px] mx-auto">
                         <div className="navbar-start">
                             <div className="dropdown">
@@ -42,7 +60,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="navbar-center hidden lg:flex">
-                            <ul className="flex gap-5  text-xl">
+                            <ul className="flex gap-5   text-[18px]">
                                 <li><Link to="/">Home</Link></li>
 
                                 <li><Link to='/allToys'>All Toys</Link></li>
@@ -50,10 +68,10 @@ const Header = () => {
                                 <li><a href='#offer'>Offer</a></li>
                                 <li><Link to='/aboutus'>About us</Link></li>
                                 {
-                                    user ? <li><Link to='/myToys'>My Toys</Link></li> : ""
+                                    user ? <Link to='/myToys'>My Toys</Link>: ""
                                 }
                                 {
-                                    user ? <li><Link to='/addAToys'>Add A Toys</Link></li> : ""
+                                    user ? <Link to='/addAToys'>Add A Toys</Link> : ""
                                 }
                                 <li><Link to='/blogs'>Blogs</Link></li>
                             </ul>
@@ -72,7 +90,7 @@ const Header = () => {
                                 {
                                     user ? <div>
                                         <button onClick={signOut}>LogOut</button>
-                                    </div> : <li><Link to='/login'>LogIn</Link></li>
+                                    </div> : <Link to='/login'>LogIn</Link>
                                 }
                             </div>
                         </div>

@@ -13,23 +13,25 @@ import KeepDistance from '../KeepDistance/KeepDistance';
 const Home = () => {
     useTitle('Home')
     return (
-        <div className='bg-white'>
-            <Banner></Banner>
-            <div className='bg-[#EEEEE6] max-w-[1580px] mx-auto'>
+        <div className='bg-white '>
+            <div className='bg-[#bec6a5]'>
+                <Banner></Banner>
+            </div>
+            <div className='bg-[#EEEEE6]'>
                 <HowToBuy></HowToBuy>
-                <div className='b-[#e2e2ce]'>
+                <div className='bg-white'>
                     <TabSection></TabSection>
                 </div>
-                <div className='b-[#EEEEE6] pt-20'>
+                <div className='bg-[#EEEEE6] pt-20'>
                     <BiggerToys></BiggerToys>
                 </div>
-                <div className='b-[#E2E2CE]'>
+                <div className='bg-white'>
                     <RecentCar></RecentCar>
                 </div>
                 <div className='b-[#BEC6A5]'>
                     <KeepDistance></KeepDistance>
                 </div>
-                <div className='b-[#E2E2CE]'>
+                <div className='bg-white'>
                     <OffSection></OffSection>
                 </div>
                 <div className='b-[#EEEEE6]'>
@@ -38,7 +40,7 @@ const Home = () => {
 
 
                 <div className='b-[#e2e2ce]'>
-                    
+
                 </div>
             </div>
         </div>

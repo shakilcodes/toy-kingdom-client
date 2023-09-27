@@ -1,12 +1,12 @@
-.offSection{
+/* .offSection{
     background-image: url('https://i.postimg.cc/4NVHgyYs/off-car.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     
     height: 300px;
     width: 50%;
-}
-.offSectionTwo{
+} */
+/* .offSectionTwo{
     background-image: url('https://i.postimg.cc/5tC86g0Q/police-ar.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,7 +14,7 @@
     height: 300px;
     width: 50%;
     margin-left: 110px;
-}
+} */
 @media only screen and (max-width: 600px) {
     .offSectionTwo {
         height: 100%;
@@ -22,6 +22,7 @@
         margin-left: 0;
     }
   }
+
 @media only screen and (max-width: 600px) {
     .offSection {
         height: 100%;

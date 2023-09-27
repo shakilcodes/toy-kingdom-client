@@ -12,7 +12,7 @@ const BiggerToys = () => {
                         <h1 className='text-3xl text-center md:text-start mt-5 md:mt-0 md:text-5xl font-bold'>Bigger Toys</h1>
                         <p className=' text-center md:text-start my-8 md:w-[500px]'>Our memebers can borrow fuly assembled larger items from just $10 a month each(minimum 2 months), with no packaging to throw away, or batteries to find, And when yhour kids have finished with then, they dont't take up valueble space in your home.</p>
                         <div className='text-center md:text-start'>
-                        <button className='btn bg-white text-black'>Go to Store</button>
+                        <button className='btn bg-white hover:bg-[#FDC153] text-black'>Go to Store</button>
                         </div>
                     </div>
                 </div>

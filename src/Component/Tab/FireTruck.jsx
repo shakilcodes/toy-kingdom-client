@@ -12,7 +12,7 @@ const FireTruck = ({ fireTruck }) => {
         }
     }
     return (
-        <div className='text-center mx-3 md:mx-0' data-aos="fade-down"
+        <div className='text-center mx-3 md:mx-0' data-aos="fade-away"
         data-aos-easing="linear"
         data-aos-duration="1000">
             <div className="card md:w-[300px] md:h-[400px] bg-base-100 shadow-xl">
